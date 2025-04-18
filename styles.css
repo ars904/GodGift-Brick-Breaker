@@ -1,0 +1,192 @@
+body {
+    font-family: 'Times New Roman';
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 430px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #000000;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+.game-area {
+    position: relative;
+    width: 430px;
+    height: 460px;
+    margin: 0 auto;
+}
+
+#gameCanvas {
+    border: 1px solid #ddd;
+    background-color: #000000;
+    border-radius: 0px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+#startScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#startButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
+    color: white;
+    background-color: #0008ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+#startButton:hover {
+    background-color: #09ff00;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+    color: black;
+    font-size: 0.8rem;
+}
+
+.game-info div {
+    background-color: #11ff00;
+    padding: 0.4rem;
+    border-radius: 5px;
+    min-width: 70px;
+    text-align: center;
+}
+
+#controlsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    width: 100%;
+}
+
+#speedControl {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #000;
+    font-size: 0.7rem;
+    width: 100%;
+    justify-content: center;
+}
+
+#speedSlider {
+    width: 150px;
+}
+
+#speedValue {
+    font-size: 0.8rem;
+    color: #000;
+    min-width: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.game-over-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 0 0 5px black;
+    z-index: 5;
+    width: 100%;
+}
+
+.win-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: green;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 0 0 5px black;
+    z-index: 5;
+    width: 100%;
+}
+
+@media (max-width: 460px) {
+    .center-container {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .game-area {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 430/460;
+    }
+    
+    h1 {
+        font-size: 1.2rem;
+    }
+    
+    .game-info {
+        font-size: 0.6rem;
+    }
+    
+    #startButton {
+        padding: 0.5rem 1rem;
+        font-size: 0.7rem;
+    }
+    
+    #speedControl {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    #speedSlider {
+        width: 120px;
+    }
+    
+    .game-over-text, .win-text {
+        font-size: 1.5rem;
+    }
+}

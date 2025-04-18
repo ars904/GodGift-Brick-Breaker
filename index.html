@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GodGift Brick Breaker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="center-container">
+        <h1>GodGift Brick Breaker</h1>
+        <div class="game-info">
+            <div>Lives: <span id="lives">3</span></div>
+            <div id="speedControl">
+                <label for="speedSlider">Speed:</label>
+                <input type="range" id="speedSlider" min="1" max="10" value="3">
+                <span id="speedValue">3</span>
+            </div>
+            <div>Level: <span id="level">1</span></div>
+        </div>
+        <div class="game-area">
+            <canvas id="gameCanvas" width="430" height="460"></canvas>
+            <div id="startScreen">
+                <button id="startButton">Start Game</button>
+            </div>
+        </div>
+        <div id="controlsContainer" class="hidden">
+        </div>
+        <p>© GodGift Network</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
